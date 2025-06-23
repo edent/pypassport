@@ -245,7 +245,7 @@ class BAC(Logger):
         Take an MRZ object and construct the MRZ information out of the MRZ extracted informations:
             - The Document number + Check digit
             - The Date of Birth + CD
-            - The Data of Expirity + CD
+            - The Data of Expiry + CD
             
         @param mrz: An MRZ object
         @type mrz: MRZ object
@@ -261,7 +261,7 @@ class BAC(Logger):
         self.log("Construct the 'MRZ_information' out of the MRZ")
         self.log("\tDocument number: " + mrz.docNumber[0] + "\tcheck digit: " + mrz.docNumber[1])
         self.log("\tDate of Birth: " + mrz.dateOfBirth[0] + "\t\tcheck digit: " + mrz.dateOfBirth[1])
-        self.log("\tDate of Expirity: " + mrz.dateOfExpiry[0] + "\tcheck digit: " + mrz.dateOfExpiry[1])
+        self.log("\tDate of Expiry: " + mrz.dateOfExpiry[0] + "\tcheck digit: " + mrz.dateOfExpiry[1])
         self.log("\tMRZ_information: " + kmrz)
         
         return kmrz.encode()
