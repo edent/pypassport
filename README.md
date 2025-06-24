@@ -1,35 +1,20 @@
 # pypassport
-pypassport for python3
 
-Tested working so far:
+Read biometric passport data via NFC using Python 3.
 
-```
-from pypassport.reader import ReaderManager
-from pypassport.epassport import EPassport, mrz
-r = ReaderManager()
-reader = r.waitForCard()
-p = EPassport(reader,"YOURMRZINFO")
-p.register(print)
-p.setCSCADirectory("C:\\TEMP")
-p.doBasicAccessControl()
-p.doActiveAuthentication()
+[Forked from the original](https://github.com/roeften/pypassport)
 
-p['DG2']
+## Howto
 
-```
+1. Download this code / clone this repo.
+1. Install the requirements with `pip3 install -U setuptools PyCryptodome pyasn1 pyscard Pillow
+1. Edit `scan.py` and add your passport's number, your date of birth, and your document's expiry date.
+1. Plug in your NFC reader.
+1. Place your passport on the NFC reader.
+1. Run `python scan.py`
+1. You will see some debug data.
+1. The code will save a JPG of the photo, metadata about the photo, and data from the Machine Readable Zone.
 
-The picture can be read and saved as well:
+## Further Reading
 
-```
-....
-
-import io
-from PIL import Image
-
-passportimage = p['DG2']['A1']['5F2E']
-imgfp = io.BytesIO(passportimage)
-img = Image.open(imgfp)
-img.save("c:\\TEMP\\passport.png")
-
-```
-If you find any conversion issues pls let me know.
+[Reading NFC Passport Chips in Linux](https://shkspr.mobi/blog/2025/06/reading-nfc-passport-chips-in-linux/)
