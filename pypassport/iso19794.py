@@ -25,7 +25,7 @@ from pypassport.hexfunctions import *
 FAC= '46414300'
 
 # ISO 19794_5 (Biometric identifiers)
-ISO19794_5_GENDER= {'00':'Unpecified',
+ISO19794_5_GENDER= {'00':'Unspecified',
                     '01':'Male',
                     '02':'Female',
                     '03':'Unknown'
