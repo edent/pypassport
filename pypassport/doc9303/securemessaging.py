@@ -92,7 +92,6 @@ class SecureMessaging(Ciphering):
         do8e = self._buildD08E(CC) 
         size = str(len(do87) + len(do97) + len(do8e)) 
         protectedAPDU = cmdHeader[:4] + intToBin(size) + do87 + do97 + do8e + hexToBin(0x00)
-        
         self.log("Construct and send protected APDU")
         self.log("\tProtectedAPDU: " + binToHexRep(protectedAPDU))
         
