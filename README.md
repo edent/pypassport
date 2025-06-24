@@ -7,7 +7,7 @@ Read biometric passport data via NFC using Python 3.
 ## Howto
 
 1. Download this code / clone this repo.
-1. Install the requirements with `pip3 install -U setuptools PyCryptodome pyasn1 pyscard Pillow
+1. Install the requirements with `pip3 install -U setuptools PyCryptodome pyasn1 pyscard Pillow`
 1. Edit `scan.py` and add your passport's number, your date of birth, and your document's expiry date.
 1. Plug in your NFC reader.
 1. Place your passport on the NFC reader.
